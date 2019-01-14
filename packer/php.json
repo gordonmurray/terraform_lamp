@@ -15,5 +15,21 @@
         {
           "Name": "{{user `ami_name`}}"
         }
-    }]
-  }
+        }],
+
+        "provisioners": [
+          {
+            "type": "shell",
+            "script": "files/apt.sh"
+          },
+          {
+            "type": "shell",
+            "script": "files/apache.sh"
+          },
+          {
+            "type": "shell",
+            "script": "files/php.sh"
+          }
+       
+        ]
+      }
